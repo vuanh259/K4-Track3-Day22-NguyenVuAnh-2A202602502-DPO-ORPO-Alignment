@@ -21,3 +21,6 @@ Các mục bổ sung chấm chéo API, HF Hub và thử thách sản phẩm tron
 chấp thuận; HF Hub cần tài khoản đích. Thử thách sản phẩm riêng cần lựa chọn lĩnh
 vực và phán đoán chuyên môn của học viên; không tự nhận dữ liệu AI tạo là dữ liệu
 do học viên tự viết.
+
+## Kaggle
+Notebook colab/Lab22_NguyenVuAnh_Kaggle_bonus.ipynb đã được import tại https://www.kaggle.com/code/anhnguynv/lab22-nguyenvuanh-bonus/edit . Checkpoint đã được upload vào dataset private và gắn Input. Đã bật T4 x2 và Internet; code dùng CUDA0. Phiên hiện chờ cấp GPU (hàng đợi vị trí 7), chưa có kết quả bonus. Notebook hỗ trợ checkpoint ZIP hoặc thư mục Kaggle tự giải nén, kiểm tra SHA256 trước khi khôi phục.

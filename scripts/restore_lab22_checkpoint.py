@@ -34,7 +34,14 @@ def main():
     from lab22 import modeling as MD
     if not torch.cuda.is_available():
         raise RuntimeError("CUDA GPU required; no training or restore has run.")
-    extract_checkpoint(args.archive, ROOT)
+    if args.archive.is_dir():
+        for rel in ("adapters/sft-mini", "adapters/dpo-checkpoints/checkpoint-100"):
+            source = args.archive / rel
+            if not source.is_dir():
+                raise FileNotFoundError(source)
+            shutil.copytree(source, ROOT / rel, dirs_exist_ok=True)
+    else:
+        extract_checkpoint(args.archive, ROOT)
     checkpoint = C.ADAPTERS / "dpo-checkpoints" / "checkpoint-100"
     if not (checkpoint / "adapter_model.safetensors").is_file():
         raise FileNotFoundError("Missing saved DPO weights")
