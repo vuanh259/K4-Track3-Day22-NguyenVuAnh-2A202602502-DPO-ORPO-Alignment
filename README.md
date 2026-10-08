@@ -40,7 +40,7 @@ K4 · Track 3 · DPO/ORPO Alignment. Hoàn thành phần bắt buộc **NB0–NB
 
 Repo lưu source, dữ liệu, config, metrics và bằng chứng; trọng số lớn được giữ riêng trên máy. Để chạy lại suy luận cần tạo đúng bản SFT merged từ adapter SFT đã lưu. DPO dùng reference là SFT, không phải mô hình gốc. [Hướng dẫn và giới hạn tái lập](submission/README_SUBMISSION.md).
 
-Output train/eval trong notebook được xuất từ Colab. Các ô báo cáo/verify cuối được đồng bộ từ lần thực thi Colab sau lần xuất notebook; provenance được ghi trong manifest. Các bonus huấn luyện ORPO, GRPO, benchmark, GGUF và beta-sweep chưa chạy.
+Output train/eval trong notebook được xuất từ Colab. Các ô báo cáo/verify cuối được đồng bộ từ lần thực thi Colab sau lần xuất notebook; provenance được ghi trong manifest. Các bonus chưa có kết quả thực nghiệm hoàn chỉnh; đã dừng theo yêu cầu người dùng ngày 08/10/2026. Mã chạy tiếp và trạng thái được lưu trong [BONUS_STATUS](submission/BONUS_STATUS.md).
 
 ## Mã nguồn học phần
 

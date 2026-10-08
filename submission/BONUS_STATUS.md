@@ -1,29 +1,20 @@
-# Bonus — chuẩn bị chạy tiếp, chưa có kết quả
+# Bonus — đã dừng theo yêu cầu người dùng
 
-Ngày 2026-10-08, Colab báo không thể cấp GPU vì tài khoản đạt hạn mức sử dụng.
-Không có lượt bonus mới nào được huấn luyện hoặc đánh giá. Notebook core và báo cáo
-core vẫn là bằng chứng thực nghiệm đã hoàn tất.
+Ngày 08/10/2026, người dùng quyết định nộp phần đã hoàn thành và dừng chạy bonus.
+Phần bắt buộc NB0–NB4 có notebook output, metrics, đánh giá và báo cáo thực nghiệm thật.
 
-Notebook `colab/Lab22_NguyenVuAnh_bonus_resume.ipynb` chuẩn bị NB3b (5 loss), NB5
-(GGUF Q4_K_M), NB6 (IFEval, GSM8K, Global-MMLU-vi), NB7 (GRPO) và beta-sweep.
-Chạy trên CUDA GPU >=12GB; notebook giữ nguyên ngân sách T4 của source.
-Không dùng notebook chưa chạy như bằng chứng đã hoàn tất bonus.
+## Công việc bonus đã làm được
 
-Khôi phục bằng file `Lab22_checkpoint_100.zip` đã lưu trên máy: SFT adapter và DPO
-checkpoint-100 có trọng số. Script dựng lại SFT merged từ adapter đã học, sau đó
-đặt DPO adapter trên đúng SFT merged; không huấn luyện lại core và không thay
-reference bằng base. File checkpoint lớn không nằm trong Git; cần upload file
-đó trong ô upload. Kết quả từng mục được tải xuống dưới dạng ZIP metadata/ảnh.
-Notebook có output, adapter/GGUF lớn cần lưu riêng trước khi phiên Colab kết thúc.
+- Chuẩn bị notebook Colab resume và Kaggle cho NB3b (5 loss), NB5 (GGUF), NB6 (benchmark), NB7 (GRPO) và beta-sweep.
+- Khôi phục SFT/DPO trên Kaggle từ checkpoint; checksum trọng số khớp bản gốc.
+- Lượt DPO bonus tương tác chạy tới bước 21/38 rồi bị timeout. Không có kết quả đánh giá bonus hoàn chỉnh để báo cáo.
+- Notebook lưu bằng chứng sau từng biến thể, xuất GGUF qua vùng tạm, tạo biểu đồ smoke test từ output và hỗ trợ checkpoint ZIP, BIN hoặc thư mục đã giải nén.
+- Version1 đã hủy do không có log thực thi; Version2 còn chờ GPU khi người dùng yêu cầu dừng. Đã yêu cầu hủy phiên và tạm dừng theo dõi tự động.
 
-Các mục bổ sung chấm chéo API, HF Hub và thử thách sản phẩm trong
-`BONUS-CHALLENGE.md` chưa thực hiện. Chấm API cần tài khoản/khóa và ngân sách được
-chấp thuận; HF Hub cần tài khoản đích. Thử thách sản phẩm riêng cần lựa chọn lĩnh
-vực và phán đoán chuyên môn của học viên; không tự nhận dữ liệu AI tạo là dữ liệu
-do học viên tự viết.
+## Giới hạn bài nộp
 
-## Kaggle
-Notebook colab/Lab22_NguyenVuAnh_Kaggle_bonus.ipynb đã được import tại https://www.kaggle.com/code/anhnguynv/lab22-nguyenvuanh-bonus/edit . Checkpoint đã được upload vào dataset private và gắn Input. Đã bật T4 x2 và Internet; code dùng CUDA0. Phiên hiện chờ cấp GPU (hàng đợi vị trí 7), chưa có kết quả bonus. Notebook hỗ trợ checkpoint ZIP hoặc thư mục Kaggle tự giải nén, kiểm tra SHA256 trước khi khôi phục.
+Không nhận NB3b, NB5, NB6, NB7, beta-sweep, chấm chéo API hoặc HF Hub đã hoàn thành.
+Notebook bonus là mã chuẩn bị để chạy tiếp, không phải bằng chứng kết quả.
+Checkpoint lớn lưu riêng, không commit vào Git. Phần bắt buộc và kết quả của nó được giữ nguyên.
 
-## Phiên chạy nền đã khởi động
-Kaggle đã khôi phục SFT/DPO thành công từ checkpoint, checksum trọng số khớp gốc. Phiên tương tác DPO dừng ở bước21/38 do timeout; chưa có kết quả đánh giá bonus hoàn chỉnh. Đã chuyển sang Save & Run All Version1, GPU T4x2: https://www.kaggle.com/code/anhnguynv/lab22-nguyenvuanh-bonus?scriptVersionId=356412729 . Notebook lưu bằng chứng sau từng biến thể, xuất GGUF qua vùng tạm để tránh vượt hạn mức output, tự tạo ảnh smoke test từ câu trả lời thực. Job đang chạy; báo cáo kết quả sẽ được cập nhật sau khi thu output.
+Notebook Kaggle: https://www.kaggle.com/code/anhnguynv/lab22-nguyenvuanh-bonus/edit
