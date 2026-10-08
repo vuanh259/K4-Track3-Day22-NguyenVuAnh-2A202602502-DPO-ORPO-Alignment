@@ -1,0 +1,15 @@
+sum log p = -6.358   mean log p = -2.119
+✓ Khớp tham chiếu: 0.6981
+loss at init = 0.6931   log 2 = 0.6931   rewards = [0.0, 0.0], [0.0, 0.0]
+margin -2.0: loss 2.127   |dL/dmargin| 0.881
+margin +0.0: loss 0.693   |dL/dmargin| 0.500
+margin +2.0: loss 0.127   |dL/dmargin| 0.119
+margin +5.0: loss 0.007   |dL/dmargin| 0.007
+A: chosen ↑, rejected ↓      loss 0.127  reward chosen +1.0  rejected -1.0
+B: chosen ↓, rejected ↓↓     loss 0.127  reward chosen -3.0  rejected -5.0
+A: chosen ↑, rejected ↓      RPO loss 2.027
+B: chosen ↓, rejected ↓↓     RPO loss 2.427
+DPO   0.5130
+IPO   24.3378
+SimPO 1.1256
+ORPO  1.2783
